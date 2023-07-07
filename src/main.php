@@ -8,7 +8,7 @@ use pocketmine\scheduler\Task;
 use pocketmine\Server;
 
 class main extends PluginBase {
-public function onLoad {
+public function onLoad() {
   $this->saveDefaultConfig();
   $config = $this->getConfig();
 }
