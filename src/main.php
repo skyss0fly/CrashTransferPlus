@@ -7,23 +7,24 @@ use pocketmine\player\Player;
 use pocketmine\scheduler\Task;
 use pocketmine\Server;
 
-class main extends PluginBase {
-public function onLoad() {
-  $this->saveDefaultConfig();
-  $config = $this->getConfig();
-}
-public function onDisable($delay) {
-  while ($delay > 0) {
-  $ip = $this->getConfig("IP");
-  $port = $this->getConfig("Port");
-  $delay = $this->getConfig("Delay");
-  $this->getLogger("transferring all cureent players to" . $ip . $port . "in " . $delay . " seconds!");
- foreach($this->getServer()->getOnlinePlayers() as $player) {
-   $player->sendMessage("The Server will reboot in " . $ip . " seconds! you will be transferred to " . $ip . $port);
- }
-   $player->transfer($ip);
-}
+class Main extends PluginBase {
+    public function onLoad() {
+        $this->saveDefaultConfig();
+        $config = $this->getConfig();
+    }
 
-}
- 
-}//* this is the main final bracket
+    public function onDisable($delay) {
+      while ($delay > 0) {
+        $delay = $this->getConfig()->get("Delay");
+        $ip = $this->getConfig()->get("IP");
+        $port = $this->getConfig()->get("Port");
+
+        $this->getLogger()->info("Transferring all current players to $ip:$port in $delay seconds!");
+
+        foreach ($this->getServer()->getOnlinePlayers() as $player) {
+            $player->sendMessage("The server will reboot in $delay seconds! You will be transferred back here!);
+            }
+            $player->transfer()
+            }
+            }
+            }
