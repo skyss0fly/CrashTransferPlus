@@ -16,7 +16,7 @@ class Main extends \pocketmine\plugin\Plugin {
     public function __construct(PluginLoader $loader, Server $server, string $file, PluginDescription $description, ResourceProvider $resourceprovider, string $datafolder) {
         $this->config = $this->loadConfig();
         parent::__construct($loader, $server, $file, $description, $resourceprovider, $datafolder);
-
+    }
  function loadConfig() {
         // Read and p `****` the configuration file
         $configData = yaml_parse_file('config.yml');
