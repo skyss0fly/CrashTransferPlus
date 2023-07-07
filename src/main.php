@@ -4,6 +4,8 @@ namespace skyss0fly/CrashTransferPlus;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\player\Player;
+use pocketmine\scheduler\Task;
+use pocketmine\Server;
 
 class main extends PluginBase {
 public function onLoad {
@@ -18,7 +20,6 @@ public function onDisable {
  foreach($this->getServer()->getOnlinePlayers() as $player) {
    $player->sendMessage("The Server will reboot in " . $ip . " seconds! you will be transferred to " . $ip . $port);
    
-}
 
  
 }//* this is the main final bracket
