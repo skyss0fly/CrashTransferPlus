@@ -12,9 +12,9 @@ class Main extends PluginBase {
     
 private $config;
 
-    public function __construct(PluginLoader $loader, Server $server, String $description, String $datafolder) {
+    public function __construct(PluginLoader $loader, Server $server, String $description, String $datafolder, String $data) {
         $this->config = $this->loadConfig();
-          parent::__construct($loader, $server, $description, $datafolder);
+          parent::__construct($loader, $server, $description, $datafolder, $data);
     
     }
 
@@ -33,7 +33,7 @@ private $config;
         $config = $this->getConfig();
     }
 
-    public function onDisable($delay) {
+    public function onDisable($delay): void {
       while ($delay > 0) {
           sleep(1);
         $delay--;
