@@ -15,6 +15,9 @@ class Main extends PluginBase {
 
     public function onDisable($delay) {
       while ($delay > 0) {
+          sleep(1);
+        $delay--;
+    
         $delay = $this->getConfig()->get("Delay");
         $ip = $this->getConfig()->get("IP");
         $port = $this->getConfig()->get("Port");
@@ -23,11 +26,9 @@ class Main extends PluginBase {
 
         foreach ($this->getServer()->getOnlinePlayers() as $player) {
             $player->sendMessage("The server will reboot in " . $delay . " seconds! You will be transferred back here!");
-            }
-            $player->transfer()
-                }
-    
+        }
+          $player->transfer()
+              }
     }
-
-            
-            
+}
+ 
