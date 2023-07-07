@@ -1,0 +1,6 @@
+name: CrashTransferPlus
+author: skyss0fly
+version: 1.0.2
+description: Transfers players when the server stops
+main: src\
+api: 5.0.0
