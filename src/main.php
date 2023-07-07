@@ -5,12 +5,12 @@ namespace skyss0fly\CrashTransferPlus;
 use pocketmine\player\Player;
 use pocketmine\scheduler\Task;
 use pocketmine\Server;
-
+use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\PluginLoader;
 use pocketmine\resource\ResourceProvider;
 use pocketmine\plugin\PluginDescription;
     
-class Main extends \pocketmine\plugin\Plugin {
+class Main extends PluginBase implements Plugin {
     private $config;
     
     public function __construct(PluginLoader $loader, Server $server, string $file, PluginDescription $description, ResourceProvider $resourceprovider, string $datafolder) {
