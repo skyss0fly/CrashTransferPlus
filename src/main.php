@@ -7,7 +7,8 @@ use pocketmine\scheduler\Task;
 use pocketmine\Server;
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\PluginLoader;
-
+use pocketmine\resource\ResourceProvider;
+use pocketmine\plugin\PluginDescription;
 class Main extends PluginBase {
     
 private $config;
