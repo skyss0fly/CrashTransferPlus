@@ -12,8 +12,7 @@ use pocketmine\plugin\PluginDescription;
 class Main extends PluginBase {
     
 private $config;
-
-    public function __construct(PluginLoader $loader, Server $server, String $description, String $datafolder, String $data, ResourceProvider $resourceprovider) {
+ public function __construct(PluginLoader $loader, Server $server, string $datafolder, String $data, ResourceProvider $resourceprovider, PluginDescription $description) {
         $this->config = $this->loadConfig();
           parent::__construct($loader, $server, $description, $datafolder, $data, $resourceprovider);
     
