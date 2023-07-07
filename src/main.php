@@ -26,7 +26,7 @@ class Main extends PluginBase {
             }
             $player->transfer()
                 }
-    }
+    
     }
 
             
