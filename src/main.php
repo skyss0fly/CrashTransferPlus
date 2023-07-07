@@ -5,18 +5,17 @@ namespace skyss0fly\CrashTransferPlus;
 use pocketmine\player\Player;
 use pocketmine\scheduler\Task;
 use pocketmine\Server;
-use pocketmine\plugin\PluginBase;
+
 use pocketmine\plugin\PluginLoader;
 use pocketmine\resource\ResourceProvider;
 use pocketmine\plugin\PluginDescription;
-class Main extends PluginBase {
     
-private $config;
-   public function __construct(PluginLoader $loader, Server $server, String $file, PluginDescription $description, ResourceProvider $resourceprovider, string $datafolder){
-    $this->config = $this->loadConfig();
-          parent::__construct($loader, $server, $file, $description, $resourceprovider, $datafolder);
+class Main extends \pocketmine\plugin\Plugin {
+    private $config;
     
-    }
+    public function __construct(PluginLoader $loader, Server $server, string $file, PluginDescription $description, ResourceProvider $resourceprovider, string $datafolder) {
+        $this->config = $this->loadConfig();
+        parent::__construct($loader, $server, $file, $description, $resourceprovider, $
 
     private function loadConfig() {
         // Read and p `****` the configuration file
