@@ -13,8 +13,9 @@ class Main extends PluginBase {
         $this->saveDefaultConfig();
         $config = $this->getConfig();
     }
+    function delay(): void {
     $delay = $this->getConfig("Delay");
-
+    }
      function onDisable($delay): void {
       while ($delay > 0) {
           sleep(1);
@@ -29,7 +30,7 @@ class Main extends PluginBase {
         foreach ($this->getServer()->getOnlinePlayers() as $player) {
             $player->sendMessage("The server will reboot in " . $delayamount . " seconds! You will be transferred back here!");
         }
-          $player->transfer($ip:$port);
+          $player->transfer($ip, $port);
       }
     }
 }
