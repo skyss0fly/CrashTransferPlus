@@ -46,7 +46,7 @@ class Main extends PluginBase {
         foreach ($this->getServer()->getOnlinePlayers() as $player) {
             $player->sendMessage("The server will reboot in " . $delay . " seconds! You will be transferred back here!");
         }
-          $player->transfer($ip);
+          $player->transfer($ip:$port);
       }
     }
 }
