@@ -22,7 +22,7 @@ class Main extends PluginBase {
         $this->getLogger()->info("Transferring all current players to $ip:$port in $delay seconds!");
 
         foreach ($this->getServer()->getOnlinePlayers() as $player) {
-            $player->sendMessage("The server will reboot in $delay seconds! You will be transferred back here!);
+            $player->sendMessage("The server will reboot in " . $delay . " seconds! You will be transferred back here!");
             }
             $player->transfer()
             }
