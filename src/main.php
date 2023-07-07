@@ -15,7 +15,7 @@ class Main extends \pocketmine\plugin\Plugin {
     
     public function __construct(PluginLoader $loader, Server $server, string $file, PluginDescription $description, ResourceProvider $resourceprovider, string $datafolder) {
         $this->config = $this->loadConfig();
-        parent::__construct($loader, $server, $file, $description, $resourceprovider, $
+        parent::__construct($loader, $server, $file, $description, $resourceprovider, $datafolder);
 
     private function loadConfig() {
         // Read and p `****` the configuration file
