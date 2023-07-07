@@ -12,9 +12,9 @@ class Main extends PluginBase {
     
 private $config;
 
-    public function __construct(PluginLoader $loader, Server $server, String $description) {
+    public function __construct(PluginLoader $loader, Server $server, String $description, String $datafolder) {
         $this->config = $this->loadConfig();
-          parent::__construct($loader, $server, $description);
+          parent::__construct($loader, $server, $description, $datafolder);
     
     }
 
