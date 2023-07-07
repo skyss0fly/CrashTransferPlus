@@ -10,7 +10,7 @@ use pocketmine\plugin\PluginLoader;
 use pocketmine\resource\ResourceProvider;
 use pocketmine\plugin\PluginDescription;
     
-class Main extends PluginBase implements Plugin {
+class Main extends PluginBase {
     private $config;
     
     public function __construct(PluginLoader $loader, Server $server, string $file, PluginDescription $description, ResourceProvider $resourceprovider, string $datafolder) {
