@@ -1,6 +1,6 @@
 <?php
 
-namespace skyss0fly/CrashTransferPlus;
+namespace skyss0fly\CrashTransferPlus;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\player\Player;
