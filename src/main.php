@@ -23,16 +23,16 @@ class Main extends \pocketmine\plugin\Plugin {
         return $configData;
     }
 
-    public function getConfig() {
+     function getConfig() {
         return $this->config;
     }
 
-    public function onLoad(): void {
+     function onLoad(): void {
         $this->saveDefaultConfig();
         $config = $this->getConfig();
     }
 
-    public function onDisable($delay): void {
+     function onDisable($delay): void {
       while ($delay > 0) {
           sleep(1);
         $delay--;
