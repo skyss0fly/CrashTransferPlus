@@ -8,6 +8,16 @@ use pocketmine\scheduler\Task;
 use pocketmine\Server;
 
 class Main extends PluginBase {
+    
+// Load and p `****` the config.yml file
+$config = yaml_parse_file('config.yml');
+
+// Access the value of $delay
+$delay = $config['delay'];
+
+
+
+In this example, we use the `yaml_parse_file` function to load and p `****` the `config.yml` file. Then, we access the value of `$delay` by accessing
     public function onLoad(): void {
         $this->saveDefaultConfig();
         $config = $this->getConfig();
