@@ -25,6 +25,8 @@ class Main extends PluginBase {
             $player->sendMessage("The server will reboot in " . $delay . " seconds! You will be transferred back here!");
             }
             $player->transfer()
-            }
-            }
-            }
+                }
+    }
+}
+            
+            
