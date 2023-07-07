@@ -24,9 +24,6 @@ public function onDisable($delay) {
    $player->transfer($ip);
 }
 
-// Example usage
-$delay = 10; // Replace with your desired delay in seconds
-countdown_timer($delay);
-
+}
  
 }//* this is the main final bracket
