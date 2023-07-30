@@ -32,6 +32,7 @@ class Main extends PluginBase {
             $delay--;
         }
       $this->transferPlayers();
+     }
 public function transferPlayers(array $players)
 {
     $this->getLogger()->info($this->getMessage("transferring players"));
@@ -45,4 +46,4 @@ public function transferPlayers(array $players)
 }
 
     }
-}
+
