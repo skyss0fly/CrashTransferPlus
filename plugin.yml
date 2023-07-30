@@ -2,5 +2,5 @@ name: CrashTransferPlus
 author: skyss0fly
 version: 1.0.3
 description: Transfers players when the server stops
-main: main
+main: Main
 api: 5.0.0
