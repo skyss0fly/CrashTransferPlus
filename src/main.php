@@ -14,7 +14,7 @@ class Main extends PluginBase {
         $config = $this->getConfig();
     }
     public function delay(): void {
-    $delay = $this->getConfig("Delay");
+    $delay = $this->getConfig()->get("Delay");
     }
      public function onDisable(): void {
         $delayamount = $this->getConfig()->get("Delay");
@@ -31,6 +31,7 @@ class Main extends PluginBase {
             sleep(1);
             $delay--;
         }
+         $player = $this->getServer()->getOnlinePlayers();
         $player->transfer($ip, $port);
     }
 }
