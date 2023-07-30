@@ -31,11 +31,11 @@ class Main extends PluginBase {
             sleep(1);
             $delay--;
         }
-      $this->transferPlayers();
+      $this->transferPlayers($player);
      }
-public function transferPlayers(array $players)
+ public function transferPlayers(array $players)
 {
-    $this->getLogger()->info($this->getMessage("transferring players"));
+    $this->getLogger()->info("transferring players");
 
     foreach($players as $player){
         if(!$player instanceof Player) continue;
