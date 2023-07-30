@@ -21,7 +21,7 @@ class Main extends PluginBase {
         $ip = $this->getConfig()->get("IP");
         $port = $this->getConfig()->get("Port");
 
-        $this->getLogger()->info("Transferring all current players to $ip:$port in $delayamount seconds!");
+        $this->getLogger()->info("Transferring all current players to " $ip ":" .$port . " in " .$delayamount . " seconds!");
 
         foreach ($this->getServer()->getOnlinePlayers() as $player) {
             $player->sendMessage("The server will reboot in " . $delayamount . " seconds! You will be transferred back here!");
