@@ -31,7 +31,18 @@ class Main extends PluginBase {
             sleep(1);
             $delay--;
         }
-         $player = $this->getServer()->getOnlinePlayers();
+      $this->transferPlayers();
+public function transferPlayers(array $players)
+{
+    $this->getLogger()->info($this->getMessage("transferring players"));
+
+    foreach($players as $player){
+        if(!$player instanceof Player) continue;
+        $ip = $this->getConfig()->get("IP");
+        $port = $this->getConfig()->get("Port");
         $player->transfer($ip, $port);
+    }
+}
+
     }
 }
