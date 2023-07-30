@@ -31,6 +31,7 @@ class Main extends PluginBase {
             sleep(1);
             $delay--;
         }
+         $player = $this->getServer()->getOnlinePlayers();
       $this->transferPlayers($player);
      }
  public function transferPlayers(array $players)
